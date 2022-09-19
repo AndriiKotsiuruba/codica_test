@@ -13,6 +13,7 @@ gem "cancancan", "~> 3.4"
 gem "devise", "~> 4.8", ">= 4.8.1"
 gem "draper", "~> 4.0", ">= 4.0.2"
 gem "dry-validation", "~> 1.8", ">= 1.8.1"
+gem "factory_bot_rails", "~> 6.2"
 gem "ffaker", "~> 2.21"
 gem "haml", "~> 5.2", ">= 5.2.2"
 gem "jbuilder", "~> 2.7"
@@ -32,7 +33,6 @@ gem "webpacker", "~> 5.0"
 
 group :development, :test, :circleci do
   gem "byebug", "~> 11.1", platforms: %i[mri mingw x64_mingw]
-  gem "factory_bot_rails", "~> 6.2"
   gem "pry", "~> 0.13.1"
 end
 
