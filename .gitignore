@@ -44,5 +44,4 @@ yarn-debug.log*
 /config/credentials/test.key
 
 /public/uploads
-Gemfile.lock
 /coverage
