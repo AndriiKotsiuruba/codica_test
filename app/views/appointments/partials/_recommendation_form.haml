@@ -1,0 +1,7 @@
+= simple_form_for(@appointment.recommendation, html: { class: "disabled-submit-btn"}) do |f|
+  = f.input :body
+  .visually-hidden
+    = f.input :appointment_id
+  .general-settings-btn.mb-4
+    = f.button :submit, t('.submit'), class: "btn-outline-primary", disabled: true
+

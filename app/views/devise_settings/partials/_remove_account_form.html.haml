@@ -1,0 +1,5 @@
+= simple_form_for(resource, url: resource_edit_path, html: { method: :delete, id: "remove_account", class: "disabled-submit-btn"}) do |f|
+  .general-settings-btn
+    = f.button :submit, t('.submit'), class: "btn-outline-primary mb-4", disabled: true
+    = f.input :destroy_confirmation,
+      label: t('.destroy_confirmation')

@@ -1,0 +1,7 @@
+= simple_form_for(resource, url: resource_edit_path, html: { method: :put, id: "edit_personal_data", class: "disabled-submit-btn"}) do |f|
+  = f.input :full_name
+  = f.association :specialty, collection: specialtys, priority: resource.specialty
+  = f.input :experience_at, as: :date, html5: true
+  = f.input :description
+  .general-settings-btn.mb-4
+    = f.button :submit, t('.submit'), class: "btn-outline-primary", disabled: true

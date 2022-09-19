@@ -1,0 +1,5 @@
+en:
+  form:
+    appointment:
+      invalid_time: Invalid time
+      size_open_appointments: Max open appointment %{size}

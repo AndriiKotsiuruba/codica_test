@@ -1,0 +1,11 @@
+.dropdown
+  %a.btn.btn-secondary.dropdown-toggle{"aria-expanded" => "false", "data-bs-toggle" => "dropdown", href: "#", role: "button"}
+    =Specialty.find_by(id: params[:specialty])&.name || t('.all')
+  %ul.dropdown-menu
+    %li
+      = link_to doctors_path, class: 'dropdown-item' do
+        = t '.all'
+    - specialtys.each do |specialty|
+      %li
+        = link_to doctors_path(specialty: specialty), class: "dropdown-item" do
+          = specialty.name

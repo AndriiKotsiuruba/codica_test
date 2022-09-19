@@ -1,0 +1,8 @@
+var $button_start_verification = $('#start_verification');
+$('#verification_code').removeClass('visually-hidden')
+
+$('.disable_without_verification_code').prop('disabled', false);
+
+$button_start_verification.removeClass('visually-hidden')
+$button_start_verification.html("#{t '.resend_sms'}")
+$button_start_verification.hide().delay(30000).fadeOut(function(){ $button_start_verification.show(); });

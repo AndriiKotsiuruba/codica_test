@@ -1,0 +1,4 @@
+- failure_notice = j render(partial: 'partials/alert', locals: { msg: t('.failure'), type: 'danger' } )
+var $target = $(".alert.alert-dismissible");
+
+$("#{failure_notice}").insertAfter( "header" ).delay(4000).fadeOut(function(){ $target.hide(); });

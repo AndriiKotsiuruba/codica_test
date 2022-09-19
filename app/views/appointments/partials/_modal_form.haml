@@ -1,0 +1,22 @@
+.modal-content
+  = simple_form_for(@appointment, url: doctor_appointments_path) do |f|
+    .modal-header
+      #staticBackdropLabel.modal-title
+        %h5
+          = @appointment.doctor.full_name
+          %small.text-muted
+            = @appointment.doctor.decorate.specialty
+        = @appointment.duration_datetime
+      %button.btn-close{"aria-label" => "Close", "data-bs-dismiss" => "modal", type: "button"}
+    .modal-body
+      %legend
+        = t ".new_appointment"
+      .visually-hidden
+        = f.input :start_time, as: :datetime, html5: true
+        = f.input :end_time, as: :datetime, html5: true
+      = f.input :full_name
+      = f.input :symptoms
+    .modal-footer
+      %button.btn.btn-outline-secondary{"data-bs-dismiss" => "modal", type: "button"}
+        = t ".close"
+      = f.button :submit, t('.submit'), class: "btn-outline-primary"

@@ -1,0 +1,32 @@
+.card.mb-3.col-12
+  .row.g-5
+    .col-md-4
+      = image_tag @doctor.image_url, class: "card-img-top"
+    .col-md-8
+      .card-body
+        %table.table.table-sm
+          %tbody
+            %tr
+              %td{colspan: 2}
+                %h5.card-title
+                  = @doctor.full_name
+            %tr
+              %td
+                = t '.specialty'
+              %td
+                %p.card-text
+                  = @doctor.specialty
+            %tr
+              %td
+                = t '.work_experience'
+              %td
+                %p.card-text
+                  = @doctor.seniority
+            %tr
+              %td
+                %small.text-muted
+                  = t '.description'
+              %td
+                %p.card-text
+                  %small.text-muted
+                    = @doctor.description

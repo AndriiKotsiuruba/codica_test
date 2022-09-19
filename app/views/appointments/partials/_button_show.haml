@@ -1,0 +1,7 @@
+- appointment_completed = present(appointment.object){|appointment| appointment.completed?}
+- appointment_unreviewed = present(appointment.object){|appointment| appointment.unreviewed?}
+
+= link_to appointment, class: "btn position-relative btn-outline-#{appointment_completed ? :dark : :secondary}" do
+  - if appointment_unreviewed
+    %span.position-absolute.top-0.start-100.translate-middle.p-2.bg-secondary.border.border-light.rounded-circle
+  = t ".show"

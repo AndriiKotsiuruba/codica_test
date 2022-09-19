@@ -1,0 +1,15 @@
+%main.container
+  .row.align-items-md-stretch
+    %h1.general-title-margin
+      = t '.title'
+    .col-12
+      .h-100.p-5.bg-light.border.rounded-3
+        = render "appointments/partials/appointment_full_info"
+    %h3.general-title-margin
+      = t '.recommendation'
+    .col-12
+      .h-100.p-5.bg-light.border.rounded-3
+        - if @appointment.recommendation&.persisted?
+          = render "appointments/partials/recommendation"
+        - elsif can? :create, Recommendation
+          = render "appointments/partials/recommendation_form"

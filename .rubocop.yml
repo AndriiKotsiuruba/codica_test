@@ -1,0 +1,39 @@
+require:
+  - rubocop-rspec
+  - rubocop-rails
+  
+AllCops:
+  TargetRubyVersion: 2.5
+  NewCops: enable
+  Exclude:
+    - 'spec/spec_helper.rb'
+    - 'vendor/bundle/**/*'
+    - 'bin/**/*'
+    - 'db/**/*'
+  SuggestExtensions: false
+
+Style/StringLiterals:
+  Enabled: true
+  EnforcedStyle: double_quotes
+
+Style/StringLiteralsInInterpolation:
+  Enabled: true
+  EnforcedStyle: double_quotes
+
+Layout/LineLength:
+  Max: 120
+
+Style/Documentation:
+  Enabled: false
+  
+Metrics/BlockLength:
+  AllowedMethods: ['describe', 'context', 'shared_examples', 'validation', 'ActiveAdmin.register']
+  Exclude:
+    - 'config/**/*'
+    - 'app/admin/**/*'
+    
+RSpec/MultipleExpectations:
+  Max: 3
+
+Lint/MissingSuper:
+  Enabled: false

@@ -1,0 +1,29 @@
+en:
+  appointments:
+    create:
+      success: You have successfully made an appointment
+    partials:
+      appointment_full_info:
+        date: Date
+        doctor: Doctor
+        specialty: Specialty
+        patient: Patient full name
+        user_tel: Patient telephone
+        symptoms: Symptoms
+      button_show:
+        show: Show
+      modal_form:
+        new_appointment: Make an appointment
+        close: Close
+        submit: Save
+      recommendation_form:
+        submit: Save
+    index:
+      title: Appointments
+      date: Date
+      doctor: Doctor
+      patient: Patient
+      user_tel: Patient telephone
+    show:
+      title: Appointment
+      recommendation: Recommendation

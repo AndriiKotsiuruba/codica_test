@@ -1,0 +1,20 @@
+%main.container
+  %h1.general-title-margin 
+    = t '.title'
+  %table.table
+    %thead
+      %tr
+        %th{scope: "col"}
+          = t ".date"
+        %th{scope: "col"}
+          = t ".patient"
+        - if user_signed_in?
+          %th{scope: "col"}
+            = t ".doctor"
+        - if doctor_signed_in?
+          %th{scope: "col"}
+            = t ".user_tel"
+        %th{scope: "col"}
+    %tbody
+      = render partial: 'appointments/partials/appointment', collection: @appointments
+  != pagy_bootstrap_nav(@pagy)
