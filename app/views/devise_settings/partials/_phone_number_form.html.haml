@@ -1,0 +1,16 @@
+= simple_form_for(resource, url: resource_edit_path, html: { method: :put, id: "edit_phone_number" }) do |f|
+  = f.input :phone_number,
+            input_html: { autocomplete: "tel", class: "edit_verification_link"}
+
+  = f.input :verification_code,
+    wrapper_html: { class: ('visually-hidden' unless @verificate), id: "verification_code" }
+
+  .row.mb-4
+    .col-md-8.col-lg-6.col-xl-4
+      = link_to verifications_path(phone_number: ""),
+                remote: true, method: "post",
+                class: "btn btn-outline-secondary visually-hidden", id: "start_verification" do
+        = t '.start_verification'
+
+  .general-settings-btn.mb-4
+    = f.button :submit, t('.submit'), disabled: !@verificate, class: "btn-outline-primary disable_without_verification_code"

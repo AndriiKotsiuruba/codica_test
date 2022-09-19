@@ -9,4 +9,11 @@ import $ from 'jquery';
 window.$ = $;
 window.jQuery = $;
 
-import 'bootstrap-sass/assets/javascripts/bootstrap';
+import 'inputmask';
+
+import 'bootstrap/dist/js/bootstrap';
+
+import 'js/disabled_submit';
+import 'js/inputmask';
+
+import 'js/registration/edit_books_count';

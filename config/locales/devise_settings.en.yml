@@ -1,0 +1,13 @@
+en:
+  devise_settings:
+    partials:
+      password_form:
+        submit: Save
+        new_password: New password
+      phone_number_form:
+        start_verification: Send verification sms
+        submit: Save
+      remove_account_form:
+        submit: Please Remove My Account
+        destroy_confirmation: I understand that all data will be lost
+        

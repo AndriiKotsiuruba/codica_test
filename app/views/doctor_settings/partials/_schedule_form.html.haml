@@ -1,0 +1,43 @@
+= simple_form_for(resource, url: resource_edit_path, html: { method: :put, id: "edit_schedule", class: "disabled-submit-btn"}) do |f|
+  .row
+    .col-sm-5.col-xs-12.mb-4
+      %legend
+        = t '.work_schedule'
+      = f.input :start_work_schedule, as: :time, html5: true
+      = f.input :end_work_schedule, as: :time, html5: true
+      = f.input :duration_appointments
+
+    .col-sm-5.col-sm-offset-1.col-xs-12.mb-4
+      %legend
+        =t '.lunch_break'
+      = f.input :start_lunch_break, as: :time, html5: true
+      = f.input :end_lunch_break, as: :time, html5: true
+
+    .col-xs-12.mb-4
+      %legend
+        = t '.weekends'
+      %ul.list-group.list-group-horizontal
+        %li.list-group-item
+          = f.input :monday_off,
+            input_html: {class: "not-disable-submit-btn"}
+        %li.list-group-item
+          = f.input :tuesday_off,
+            input_html: {class: "not-disable-submit-btn"}
+        %li.list-group-item
+          = f.input :wednesday_off,
+            input_html: {class: "not-disable-submit-btn"}
+        %li.list-group-item
+          = f.input :thursday_off,
+            input_html: {class: "not-disable-submit-btn"}
+        %li.list-group-item
+          = f.input :friday_off,
+            input_html: {class: "not-disable-submit-btn"}
+        %li.list-group-item
+          = f.input :saturday_off,
+            input_html: {class: "not-disable-submit-btn"}
+        %li.list-group-item
+          = f.input :sunday_off,
+            input_html: {class: "not-disable-submit-btn"}
+
+  .general-settings-btn
+    = f.button :submit, t('.submit'), class: "btn-outline-primary mb-4", disabled: true

@@ -1,0 +1,6 @@
+= simple_form_for(resource, url: resource_edit_path, html: { method: :put, id: "edit_picture", class: "disabled-submit-btn"}) do |f|
+  =f.fields_for :picture do |p|
+    = image_tag(resource.picture.image_url, class: "img-thumbnail") if resource.picture&.image_url
+    = p.input :image, as: :file, input_html: { class: "mb-3"}
+  .general-settings-btn.mb-4
+    = f.button :submit, t('.submit'), class: "btn-outline-primary"

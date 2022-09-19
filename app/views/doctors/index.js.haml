@@ -1,0 +1,4 @@
+- doctors_html = j render partial: 'doctors/partials/doctor', collection: @doctors, as: :doctor
+$("#show-doctors").append("#{doctors_html}");
+- link_html = @pagy.next ? j(render 'doctors/partials/next_page_link', pagy: @pagy) : nil
+$("#more-doctors").html("#{link_html}");

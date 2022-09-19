@@ -1,0 +1,13 @@
+%tr
+  %td
+    = appointment.duration_datetime
+  %td
+    = appointment.full_name
+  - if user_signed_in?
+    %td
+      = appointment.doctor.full_name
+  - if doctor_signed_in?
+    %td
+      = appointment.user.phone_number
+  %td
+    = render "appointments/partials/button_show", appointment: appointment

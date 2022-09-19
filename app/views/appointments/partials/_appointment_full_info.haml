@@ -1,0 +1,32 @@
+%table.table.table-borderless
+  %tbody
+    %tr
+      %td
+        = t ".date"
+      %td
+        = @appointment.duration_datetime
+    %tr
+      %td
+        = t ".doctor"
+      %td
+        = @appointment.doctor.full_name
+    %tr
+      %td
+        = t ".specialty"
+      %td
+        = @appointment.doctor.specialty&.name
+    %tr
+      %td
+        = t ".patient"
+      %td
+        = @appointment.full_name
+    %tr
+      %td
+        = t ".user_tel"
+      %td
+        = @appointment.user.phone_number
+    %tr
+      %td
+        = t ".symptoms"
+      %td
+        = @appointment.symptoms

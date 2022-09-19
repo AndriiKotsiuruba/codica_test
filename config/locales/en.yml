@@ -1,2 +1,5 @@
 en:
-  app_name: "Codica test"
+  app_name: "Codica Clinic"
+  link:
+    sign_up: Sign up
+    log_in: Log in

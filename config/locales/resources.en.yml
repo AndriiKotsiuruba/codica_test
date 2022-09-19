@@ -1,0 +1,6 @@
+en:
+  resources:
+    notices:
+      resource-updated: Changes saved
+      destroyed: All your data has been deleted
+      no_confirm_destroy: You have not confirmed the deletion of the account

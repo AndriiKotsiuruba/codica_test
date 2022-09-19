@@ -1,0 +1,16 @@
+en:
+  doctors:
+    partials:
+      doctor_full_info:
+        specialty: Specialty
+        work_experience: Work experience
+        description: Description
+      doctor:
+        specialty: Specialty
+        work_experience: Work experience
+      filter:
+        all: All
+      next_page_link:
+        view_more: View more
+    index:
+      title: Doctors

@@ -1,0 +1,4 @@
+en:
+  recommendations:
+    create:
+      success: The recommendation to the patient is saved

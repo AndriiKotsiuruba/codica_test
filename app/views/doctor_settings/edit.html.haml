@@ -1,0 +1,42 @@
+%main.container
+  %h1.general-title-margin
+    = t '.title'
+  %ul.nav.nav-tabs
+    %li.nav-item
+      %a.nav-link{"data-bs-toggle": "tab", href: "#personal", class: ("active" if  @tab == :personal)}
+        = t ".personal"
+    %li.nav-item
+      %a.nav-link{"data-bs-toggle": "tab", href: "#privacy", class: ("active" if  @tab == :privacy)}
+        = t ".privacy"
+    %li.nav-item
+      %a.nav-link{"data-bs-toggle": "tab", href: "#schedule", class: ("active" if  @tab == :schedule)}
+        = t ".schedule"
+  .tab-content
+    #personal.tab-pane.container{class: (@tab == :personal ? "active" : "fade")}
+      .row
+        .col-sm-5.col-xs-12.mb-4
+          %legend
+            = t '.personal_data'
+          = render 'doctor_settings/partials/personal_data_form'
+        .col-sm-5.col-sm-offset-1.col-xs-12.mb-4
+          %legend
+            =t '.picture'
+          = render 'doctor_settings/partials/picture_form'
+    #privacy.tab-pane.container{class: (@tab == :privacy ? "active" : "fade")}
+      .row
+        .col-sm-5.col-xs-12.mb-4
+          %legend
+            = t '.phone_number'
+          = render 'devise_settings/partials/phone_number_form'
+        .col-sm-5.col-sm-offset-1.col-xs-12.mb-4
+          %legend
+            =t '.password'
+          = render 'devise_settings/partials/password_form'
+        .col-xs-12.mb-4
+          %legend
+            = t '.remove_account'
+          = render 'devise_settings/partials/remove_account_form'
+    #schedule.tab-pane.container{class: (@tab == :schedule ? "active" : "fade")}
+      .row
+        .col
+          = render 'doctor_settings/partials/schedule_form'

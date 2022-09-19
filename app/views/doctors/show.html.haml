@@ -1,0 +1,4 @@
+%main.container.py-4
+  .row.mb-5.mt-5
+    = render 'doctors/partials/doctor_full_info'
+  = render 'doctors/partials/calendar' if can? :create, Appointment

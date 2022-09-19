@@ -1,0 +1,22 @@
+en:
+  doctor_settings:
+    partials:
+      personal_data_form:
+        submit: Save
+      picture_form:
+        submit: Save
+      schedule_form:
+        work_schedule: Work schedule
+        lunch_break: Lunch break
+        weekends: Weekends
+        submit: Save
+    edit:
+      title: Settings
+      personal: Personal
+      privacy: Privacy
+      schedule: Schedule
+      personal_data: Personal data
+      picture: Picture
+      phone_number: Phone number
+      password: Password
+      remove_account: Remove account

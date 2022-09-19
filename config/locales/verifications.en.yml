@@ -1,0 +1,6 @@
+en:
+  verifications:
+    failure:
+      failure: Enter a valid phone number
+    create:
+      resend_sms: Resend sms

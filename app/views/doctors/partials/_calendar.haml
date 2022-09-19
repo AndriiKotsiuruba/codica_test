@@ -1,0 +1,19 @@
+= week_calendar(events: @work_hours) do |date, work_hours|
+  = date.day
+  - work_hours.each do |work_hour|
+    .card.text-bg-secondary
+      .card-body
+        - if work_hour.busy_time
+          %a.btn.btn-outline-danger{disabled: true}
+            = t '.unavailable_for_reception'
+        - else
+          = link_to new_doctor_appointment_path(@doctor, 
+                                                appointment: { start_time: work_hour.start_time, end_time: work_hour.end_time }),
+                    remote: true,
+                    "data-bs-target": "#staticBackdrop",
+                    "data-bs-toggle": "modal",
+                    class: "btn btn-outline-light" do
+            = t '.make_an_appointment'
+      .card-footer.text-bg-secondary
+        %small
+          = work_hour.duration_time

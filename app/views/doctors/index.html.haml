@@ -1,0 +1,10 @@
+%main.container.py-4
+  %h1.general-title-margin 
+    = t '.title'
+  .dropdowns.mb-2
+    = render 'doctors/partials/filter'
+  #show-doctors.row
+    = render partial: 'doctors/partials/doctor', collection: @doctors
+  - if (@pagy.next)
+    #more-doctors.text-center.mt-3.mb-3
+      = render 'doctors/partials/next_page_link', pagy: @pagy
