@@ -13,8 +13,8 @@ class Doctor < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :rememberable, :validatable
 
-  validates :phone_number, uniqueness: true,
-                           format: { with: /\A\+[0-9]{7,15}\z/,
+  validates :phone_number, uniqueness: { case_sensitive: false }
+  validates :phone_number, format: { with: /\A\+[0-9]{7,15}\z/,
                                      message: I18n.t("errors.messages.invalide_phone_number") }
 
   def email_required?; end

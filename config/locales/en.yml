@@ -3,3 +3,9 @@ en:
   link:
     sign_up: Sign up
     log_in: Log in
+    log_out: Log out
+    to_home: Home
+    to_doctors: Doctors
+    to_my_account: My account
+    to_my_appointments: My appointments
+    to_settings: Settings

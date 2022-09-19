@@ -20,6 +20,8 @@
                 = t 'link.to_my_account'
               %ul.dropdown-menu
                 %li
+                  = link_to t('link.to_my_appointments'), appointments_path, class: "dropdown-item"
+                %li
                   = link_to t('link.to_settings'), user_settings_path, class: "dropdown-item"
                 %li
                   %hr.dropdown-divider/
@@ -30,6 +32,8 @@
               %a.nav-link.dropdown-toggle{"aria-expanded" => "false", "data-bs-toggle" => "dropdown", href: "#", role: "button"}
                 = t 'link.to_my_account'
               %ul.dropdown-menu
+                %li
+                  = link_to t('link.to_my_appointments'), appointments_path, class: "dropdown-item"
                 %li
                   = link_to t('link.to_settings'), doctor_settings_path, class: "dropdown-item"
                 %li
